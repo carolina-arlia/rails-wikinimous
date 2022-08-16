@@ -18,21 +18,20 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
-  # def update
-  #   @task.update(task_params)
+  def update
+    @article.update(article_params)
 
-  #   redirect_to task_path(@task)
-  # end
+    redirect_to article_path(@article)
+  end
 
-  # def destroy
-  #   @task.destroy
+  def destroy
+    @article.destroy
 
-  #   redirect_to tasks_path, status: :see_other
-  # end
-
+    redirect_to articles_path, status: :see_other
+  end
 
   private
 
